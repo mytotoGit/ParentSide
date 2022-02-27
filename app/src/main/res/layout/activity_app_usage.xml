@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".ui.AppUsageActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:elevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_toolbar"
+            android:gravity="start"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/button_back"
+                tools:ignore="contentDescription" />
+
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:ellipsize="end"
+                android:fontFamily="@font/nova_round"
+                android:maxLines="1"
+                android:text="App Name"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="8dp"
+                android:clickable="false"
+                android:focusable="false"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <antonkozyriatskyi.circularprogressindicator.CircularProgressIndicator
+                            android:id="@+id/progressTotalApps"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_gravity="center"
+                            app:direction="clockwise"
+                            app:dotColor="?colorPrimary"
+                            app:dotWidth="20dp"
+                            app:drawDot="true"
+                            app:enableProgressAnimation="true"
+                            app:fillBackground="false"
+                            app:gradientEndColor="@color/blue_200"
+                            app:gradientType="linear"
+                            app:progressBackgroundColor="#63CCCDD3"
+                            app:progressBackgroundStrokeWidth="8dp"
+                            app:progressCap="round"
+                            app:progressColor="@color/blue_200"
+                            app:progressStrokeWidth="10dp"
+                            app:startAngle="270"
+                            app:textColor="@color/text"
+                            app:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/nova_round"
+                            android:maxLines="1"
+                            android:text="Total Apps"
+                            android:textColor="@color/text"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:ellipsize="end"
+                                    android:fontFamily="@font/nova_round"
+                                    android:maxLines="1"
+                                    android:text="Blocked"
+                                    android:textColor="@color/text"
+                                    android:textSize="16sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <antonkozyriatskyi.circularprogressindicator.CircularProgressIndicator
+                                    android:id="@+id/progressBlocked"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    app:direction="clockwise"
+                                    app:dotColor="?colorPrimary"
+                                    app:dotWidth="8dp"
+                                    app:drawDot="true"
+                                    app:enableProgressAnimation="true"
+                                    app:fillBackground="false"
+                                    app:gradientEndColor="@color/blue_200"
+                                    app:gradientType="linear"
+                                    app:progressBackgroundColor="#63CCCDD3"
+                                    app:progressBackgroundStrokeWidth="4dp"
+                                    app:progressCap="round"
+                                    app:progressColor="@color/blue_200"
+                                    app:progressStrokeWidth="4dp"
+                                    app:startAngle="270"
+                                    app:textColor="@color/text"
+                                    app:textSize="10sp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:ellipsize="end"
+                                    android:fontFamily="@font/nova_round"
+                                    android:maxLines="1"
+                                    android:text="Allowed"
+                                    android:textColor="@color/text"
+                                    android:textSize="16sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <antonkozyriatskyi.circularprogressindicator.CircularProgressIndicator
+                                    android:id="@+id/progressAllowed"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    app:direction="clockwise"
+                                    app:dotColor="?colorPrimary"
+                                    app:dotWidth="8dp"
+                                    app:drawDot="true"
+                                    app:enableProgressAnimation="true"
+                                    app:fillBackground="false"
+                                    app:gradientEndColor="@color/blue_200"
+                                    app:gradientType="linear"
+                                    app:progressBackgroundColor="#63CCCDD3"
+                                    app:progressBackgroundStrokeWidth="4dp"
+                                    app:progressCap="round"
+                                    app:progressColor="@color/blue_200"
+                                    app:progressStrokeWidth="4dp"
+                                    app:startAngle="270"
+                                    app:textColor="@color/text"
+                                    app:textSize="10sp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <com.hadiidbouk.charts.ChartProgressBar
+                    android:id="@+id/chartProgressBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    app:hdBarCanBeClick="true"
+                    app:hdBarHeight="170dp"
+                    app:hdBarRadius="10dp"
+                    app:hdBarTitleColor="@color/bar_title_color"
+                    app:hdBarTitleMarginTop="9dp"
+                    app:hdBarTitleSelectedColor="@color/blue_700"
+                    app:hdBarTitleTxtSize="12sp"
+                    app:hdBarWidth="10dp"
+                    app:hdEmptyColor="@color/empty"
+                    app:hdMaxValue="60"
+                    app:hdPinBackgroundColor="@color/pin_background"
+                    app:hdPinDrawable="@drawable/background_transparent"
+                    app:hdPinTextColor="@color/pin_text"
+                    app:hdPinTxtSize="17sp"
+                    app:hdProgressClickColor="@color/progress_click"
+                    app:hdProgressColor="@color/progress"
+                    app:hdProgressDisableColor="@color/progress_disable" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

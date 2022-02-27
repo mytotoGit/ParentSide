@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:clickable="false"
+    android:focusable="false"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="3dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/nova_round"
+            android:maxLines="1"
+            android:text="Camera Side"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupCameraSide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:selectionRequired="true"
+            app:singleLine="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/sideFront"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:fontFamily="@font/nova_round"
+                android:text="Front"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/sideBack"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nova_round"
+                android:text="Back"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/nova_round"
+            android:maxLines="1"
+            android:text="Camera Resolution"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupCameraResolution"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:selectionRequired="true"
+            app:singleLine="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/resolutionHigh"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:fontFamily="@font/nova_round"
+                android:text="High"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/resolutionMedium"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nova_round"
+                android:text="Medium"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/resolutionLow"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nova_round"
+                android:text="Low"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/nova_round"
+            android:maxLines="1"
+            android:text="Image Format"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupImageFormat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:selectionRequired="true"
+            app:singleLine="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/formatJPEG"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:fontFamily="@font/nova_round"
+                android:text="JPEG"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/formatPNG"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nova_round"
+                android:text="PNG"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/formatWEBP"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nova_round"
+                android:text="WEBP"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/nova_round"
+            android:maxLines="1"
+            android:text="Camera Rotation"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupCameraRotation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:selectionRequired="true"
+            app:singleLine="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/rotation0"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:fontFamily="@font/nova_round"
+                android:text="0"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/rotation90"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nova_round"
+                android:text="90"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/rotation180"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nova_round"
+                android:text="180"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/rotation270"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nova_round"
+                android:text="270"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCancel"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:text="Cancel"
+                android:textColor="@color/blue_200"
+                app:cornerRadius="20dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAccessNow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:backgroundTint="@color/blue_200"
+                android:text="Access Now"
+                android:textColor="@color/white"
+                app:cornerRadius="20dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:clickable="false"
+    android:focusable="false"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="0dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/nova_round"
+                android:maxLines="1"
+                android:text="Start Time"
+                android:textAlignment="center"
+                android:textColor="@color/text"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <com.ishuinzu.parentside.widget.datetimepicker.view.timePicker.TimePicker
+                android:id="@+id/startTimePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:offset="2"
+                app:textSizeInteger="16" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/nova_round"
+                android:maxLines="1"
+                android:text="End Time"
+                android:textAlignment="center"
+                android:textColor="@color/text"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <com.ishuinzu.parentside.widget.datetimepicker.view.timePicker.TimePicker
+                android:id="@+id/endTimePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:offset="2"
+                app:textSizeInteger="16" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/nova_round"
+                android:maxLines="1"
+                android:text="Date"
+                android:textAlignment="center"
+                android:textColor="@color/text"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <com.ishuinzu.parentside.widget.datetimepicker.view.datePicker.DatePicker
+                android:id="@+id/datePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:offset="3"
+                app:pickerMode="dayFirst"
+                app:textSizeInteger="16" />
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/blue_500"
+            android:text="Done"
+            android:textColor="@color/white"
+            app:cornerRadius="20dp" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

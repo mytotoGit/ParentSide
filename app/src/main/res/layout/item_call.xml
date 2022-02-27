@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutCall"
+    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginVertical="4dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/nova_round"
+                android:maxLines="1"
+                android:text="Mon Apr 19 2021 19:58:36"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/txtGeoLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/nova_round"
+                android:maxLines="1"
+                android:text="Pakistan"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <antonkozyriatskyi.circularprogressindicator.CircularProgressIndicator
+            android:id="@+id/progressDuration"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center"
+            app:direction="clockwise"
+            app:dotColor="?colorPrimary"
+            app:dotWidth="8dp"
+            app:drawDot="true"
+            app:enableProgressAnimation="true"
+            app:fillBackground="false"
+            app:gradientEndColor="@color/blue_200"
+            app:gradientType="linear"
+            app:progressBackgroundColor="#63CCCDD3"
+            app:progressBackgroundStrokeWidth="4dp"
+            app:progressCap="round"
+            app:progressColor="@color/blue_200"
+            app:progressStrokeWidth="4dp"
+            app:startAngle="270"
+            app:textColor="@color/text"
+            app:textSize="10sp" />
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

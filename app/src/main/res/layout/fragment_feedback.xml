@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="8dp"
+    tools:context=".fragment.FeedbackFragment">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:src="@drawable/img_logo_transparent" />
+
+    <TextView
+        android:id="@+id/txtFeedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/nova_round"
+        android:maxLines="4"
+        android:text="How likely would you recommend Parental Control &amp; Monitor Apps to your friend or colleague?"
+        android:textAlignment="center"
+        android:textSize="16sp" />
+
+    <com.google.android.material.card.MaterialCardView
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:clickable="false"
+        android:focusable="false"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/nova_round"
+                android:maxLines="2"
+                android:text="Please give your your feedback so that we improve our services for you."
+                android:textAlignment="center"
+                android:textSize="14sp" />
+
+            <com.willy.ratingbar.ScaleRatingBar
+                android:id="@+id/simpleRatingBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:srb_clearRatingEnabled="true"
+                app:srb_clickable="true"
+                app:srb_drawableEmpty="@drawable/icon_rate_empty"
+                app:srb_drawableFilled="@drawable/icon_rate_fill"
+                app:srb_isIndicator="false"
+                app:srb_minimumStars="0"
+                app:srb_numStars="5"
+                app:srb_rating="2"
+                app:srb_scrollable="true"
+                app:srb_starHeight="30dp"
+                app:srb_starPadding="15dp"
+                app:srb_starWidth="40dp"
+                app:srb_stepSize="0.5" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Feedback"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusTopStart="10dp"
+                app:endIconMode="clear_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtFeedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:fontFamily="@font/nova_round"
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardSendFeedback"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardBackgroundColor="@color/blue_200"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/nova_round"
+                        android:maxLines="1"
+                        android:text="Send Feedback"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:checked="true"
+            android:icon="@drawable/icon_home_drawer"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_notifications"
+            android:icon="@drawable/icon_notifications_drawer"
+            android:title="Notifications"
+            app:actionViewClass="android.widget.TextView" />
+        <item
+            android:id="@+id/nav_location_monitoring"
+            android:icon="@drawable/icon_location_monitoring_drawer"
+            android:title="Location Monitoring"
+            app:actionViewClass="androidx.appcompat.widget.SwitchCompat" />
+        <item
+            android:id="@+id/nav_real_time_location"
+            android:checkable="false"
+            android:icon="@drawable/icon_location_monitoring_drawer"
+            android:title="Real Time Location"
+            app:actionViewClass="androidx.appcompat.widget.SwitchCompat" />
+        <item
+            android:id="@+id/nav_apps_usage"
+            android:icon="@drawable/icon_apps_usage_drawer"
+            android:title="Apps Usage"
+            app:actionViewClass="androidx.appcompat.widget.SwitchCompat" />
+        <item
+            android:id="@+id/nav_health_and_fitness"
+            android:icon="@drawable/icon_health_and_fitness_drawer"
+            android:title="Health &amp; Fitness"
+            app:actionViewClass="androidx.appcompat.widget.SwitchCompat" />
+        <item
+            android:id="@+id/nav_live_lock"
+            android:icon="@drawable/icon_live_lock_drawer"
+            android:title="Live Lock"
+            app:actionViewClass="androidx.appcompat.widget.SwitchCompat" />
+        <item
+            android:id="@+id/nav_screen_recordings"
+            android:icon="@drawable/icon_screen_recordings_drawer"
+            android:title="Screen Recordings"
+            app:actionViewClass="androidx.appcompat.widget.SwitchCompat" />
+        <item
+            android:id="@+id/nav_screenshots"
+            android:icon="@drawable/icon_screenshots_drawer"
+            android:title="Screenshots"
+            app:actionViewClass="androidx.appcompat.widget.SwitchCompat" />
+        <item
+            android:id="@+id/nav_access_camera"
+            android:icon="@drawable/icon_screenshots_drawer"
+            android:title="Take Picture"
+            app:actionViewClass="androidx.appcompat.widget.SwitchCompat" />
+        <item
+            android:id="@+id/nav_call_logs"
+            android:icon="@drawable/icon_call_logs_drawer"
+            android:title="Call Logs"
+            app:actionViewClass="androidx.appcompat.widget.SwitchCompat" />
+        <item
+            android:id="@+id/nav_sms_logs"
+            android:icon="@drawable/icon_sms_logs_drawer"
+            android:title="SMS Logs"
+            app:actionViewClass="androidx.appcompat.widget.SwitchCompat" />
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/icon_setting_drawer"
+            android:title="Setting" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/icon_profile_drawer"
+            android:title="Profile" />
+        <item
+            android:id="@+id/nav_contact_us"
+            android:icon="@drawable/icon_contact_us_drawer"
+            android:title="Contact Us" />
+        <item
+            android:id="@+id/nav_feedback"
+            android:icon="@drawable/icon_feedback_drawer"
+            android:title="Feedback" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/icon_logout_drawer"
+            android:title="Logout" />
+    </group>
+</menu>

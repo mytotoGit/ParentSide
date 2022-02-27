@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue_200">#536DFE</color>
+    <color name="blue_500">#3F51B5</color>
+    <color name="blue_700">#303F9F</color>
+    <color name="orange_200">#FFAB40</color>
+    <color name="orange_700">#F57C00</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="background">#FF121212</color>
+    <color name="drawer_background">#FF212121</color>
+    <color name="text">#FFFFFFFF</color>
+    <color name="text_invert">#FF000000</color>
+    <color name="gray">#FFEEEEEE</color>
+    <color name="gray_darken">#FFDDDDDD</color>
+    <color name="colorGray">#FF4A4A4A</color>
+    <color name="blue">#2a9df4</color>
+    <color name="backgroundColor">#000000</color>
+    <color name="color_text">#FFFFFF</color>
+    <color name="color_grey">#767676</color>
+    <color name="color_grey1">#555555</color>
+    <color name="color_grey2">#333333</color>
+</resources>

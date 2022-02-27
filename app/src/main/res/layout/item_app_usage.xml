@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutAppUsage"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:padding="16dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/app_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@null"
+        android:src="@drawable/img_logo"
+        app:civ_border_color="@color/text_invert"
+        app:civ_border_overlay="true"
+        app:civ_border_width="4dp"
+        app:civ_circle_background_color="@color/text" />
+
+    <TextView
+        android:id="@+id/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_toEndOf="@+id/app_image"
+        android:fontFamily="@font/nova_round"
+        android:singleLine="true"
+        android:text="App Name"
+        android:textColor="@color/text"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/app_name"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@+id/app_image"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/icon_mobile_usage"
+                tools:ignore="contentDescription" />
+
+            <TextView
+                android:id="@+id/txtMobileUsage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/keania_one"
+                android:maxLines="1"
+                android:text="0 MB"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:orientation="vertical"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/icon_usage_wifi"
+                tools:ignore="contentDescription" />
+
+            <TextView
+                android:id="@+id/txtWifiUsage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/keania_one"
+                android:maxLines="1"
+                android:text="0 MB"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutUsage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <antonkozyriatskyi.circularprogressindicator.CircularProgressIndicator
+                android:id="@+id/progressUsage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                app:direction="clockwise"
+                app:dotColor="?colorPrimary"
+                app:dotWidth="8dp"
+                app:drawDot="true"
+                app:enableProgressAnimation="true"
+                app:fillBackground="false"
+                app:gradientEndColor="@color/blue_200"
+                app:gradientType="linear"
+                app:progressBackgroundColor="#63CCCDD3"
+                app:progressBackgroundStrokeWidth="4dp"
+                app:progressCap="round"
+                app:progressColor="@color/blue_200"
+                app:progressStrokeWidth="4dp"
+                app:startAngle="270"
+                app:textColor="@color/text"
+                app:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/app_usage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/nova_round"
+                android:text="1h 5m 32s"
+                android:textSize="8sp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nova_round"
+            android:text="Screen Time"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

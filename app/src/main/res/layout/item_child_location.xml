@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutChildLocation"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:paddingVertical="16dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp">
+
+        <TextView
+            android:id="@+id/txtStartEndTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/nova_round"
+            android:maxLines="1"
+            android:text="13:00 - 15:00"
+            android:textColor="@color/text"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/nova_round"
+            android:maxLines="1"
+            android:text="03/08/2021"
+            android:textColor="@color/text"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/nova_round"
+        android:maxLines="1"
+        android:text="Tracking Location"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="@color/text"
+        android:textSize="12sp" />
+
+    <com.google.android.material.card.MaterialCardView
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:clickable="false"
+        android:focusable="false"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="0dp"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.FullScreenMapActivity">
+
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/mapTrackingLocation"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+
+            <ImageView
+                android:id="@+id/btnFullTrackingLocation"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignTop="@id/mapTrackingLocation"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/button_map_full_screen_exit"
+                tools:ignore="contentDescription" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/nova_round"
+        android:maxLines="1"
+        android:text="Child Location"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="@color/text"
+        android:textSize="12sp" />
+
+    <com.google.android.material.card.MaterialCardView
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:clickable="false"
+        android:focusable="false"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="0dp"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.FullScreenMapActivity">
+
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/mapLocation"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+
+            <ImageView
+                android:id="@+id/btnFullLocation"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignTop="@id/mapLocation"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/button_map_full_screen_exit"
+                tools:ignore="contentDescription" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>
